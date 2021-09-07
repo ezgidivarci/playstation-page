@@ -12,7 +12,7 @@
         <div class="navbar">
             <img src="img/logo.png" alt="logo" class="logo">
             <nav>
-                <ul>
+                <ul id="menuList"> 
                     <li>
                         <a href="">Home</a>
                         <a href="">VR Accessories</a>
@@ -22,7 +22,7 @@
                     </li>
                 </ul>
             </nav>
-            <img src="img/menu.png" alt="menu-icon" class="menu-icon">
+            <img src="img/menu.png" alt="menu-icon" class="menu-icon" onclick="togglemenu()">
 
             
         </div>
@@ -37,9 +37,36 @@
             </div>
             <div class="col2">
                 <img src="img/controller.png" class="controller">
+                <div class="color-box"></div>
+                <div class="add-btn">
+                    <img src="img/add.png" alt="">
+                    <p><small>Add to Cart</small></p>
+                </div>
             </div>
         
         </div>
+
+        <div class="social-links">
+            <img src="img/fb.png">
+            <img src="img/tw.png">
+            <img src="img/ig.png">
+        </div>
     </div>
+
+
+    <script>
+        var menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px";
+
+        function togglemenu() {
+            if(menuList.style.maxHeight== "0px") {
+                menuList.style.maxHeight= "130px";
+            }
+            else {
+                menuList.style.maxHeight= "0px";
+            }
+        }
+
+    </script>
 </body>
 </html>
